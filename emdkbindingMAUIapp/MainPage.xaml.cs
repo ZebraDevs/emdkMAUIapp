@@ -1,5 +1,3 @@
-﻿using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls;
 using CommunityToolkit.Mvvm.Messaging;
 
 namespace emdkMAUIapp;

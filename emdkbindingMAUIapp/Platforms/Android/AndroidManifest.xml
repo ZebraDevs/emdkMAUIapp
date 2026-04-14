@@ -5,7 +5,7 @@
 	</application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
-	<uses-sdk android:targetSdkVersion="33" android:minSdkVersion="29" />
+	<uses-sdk android:targetSdkVersion="36" android:minSdkVersion="29" />
 	<uses-permission android:name="com.symbol.emdk.permission.EMDK" />
 	<queries>
 		<package android:name="com.symbol.emdk.emdkservice" />

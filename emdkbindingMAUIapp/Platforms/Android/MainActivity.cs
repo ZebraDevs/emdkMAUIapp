@@ -4,6 +4,7 @@ using Android.OS;
 using Android.Widget;
 using System.Text;
 using CommunityToolkit.Mvvm.Messaging;
+using System.Runtime.InteropServices;
 
 using Android.Content;
 using Android.Util;
@@ -131,6 +132,19 @@ public class MainActivity : MauiAppCompatActivity, EMDKManager.IEMDKListener, EM
         base.OnCreate(savedInstanceState);
 
         sb = new StringBuilder();
+        // append current .NET runtime/version information
+        try
+        {
+            sb.AppendLine("Runtime: " + RuntimeInformation.FrameworkDescription);
+            sb.AppendLine("Environment.Version: " + System.Environment.Version.ToString());
+            // append app target API level
+            sb.AppendLine("App target API level: " + this.ApplicationInfo.TargetSdkVersion);
+        }
+        catch (Exception ex)
+        {
+            sb.AppendLine("Unable to determine .NET version: " + ex.Message);
+        }
+
 
 
         //RECEIVING A STRING FROM XAML AND EXECUTING IN NATIVE ANDROID
